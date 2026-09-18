@@ -95,8 +95,8 @@ export default function Page() {
     // ✅ NEW: Security-specific local internal linking block (renders in ServiceClientPage)
     localLinks: {
       eyebrow: "Areas we serve",
-      title: "Cybersecurity coverage in your area",
-      desc: "Open your local page for coverage details, FAQs, and next steps.",
+      title: "Cybersecurity coverage and free tools",
+      desc: "Open your local page for coverage details, or test your own domain with our free email security check.",
       items: [
         {
           label: "Allentown, PA",
@@ -112,6 +112,21 @@ export default function Page() {
           label: "Emmaus, PA",
           href: "/locations/emmaus-pa",
           desc: "Security-first IT support with practical controls.",
+        },
+        {
+          label: "Broomall & Delaware County, PA",
+          href: "/locations/broomall-pa",
+          desc: "Onsite security and IT support across Delaware County.",
+        },
+        {
+          label: "Free tool: email security check",
+          href: "/tools/email-security-check",
+          desc: "See in 10 seconds whether scammers can send email as your business.",
+        },
+        {
+          label: "Email Security Fix-in-a-Day",
+          href: "/lp/email-security-fix",
+          desc: "SPF, DKIM and DMARC set up properly. Fixed price, done remotely.",
         },
       ],
       cta1: { label: "View all areas", href: "/areas" },
