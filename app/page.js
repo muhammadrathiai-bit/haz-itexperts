@@ -272,6 +272,11 @@ export default function HomePage() {
     "Allentown, PA": "/locations/allentown-pa",
     "Macungie, PA": "/locations/macungie-pa",
     "Emmaus, PA": "/locations/emmaus-pa",
+    "Broomall, PA": "/locations/broomall-pa",
+    "Newtown Square, PA": "/locations/newtown-square-pa",
+    "Havertown, PA": "/locations/havertown-pa",
+    "Springfield, PA": "/locations/springfield-pa",
+    "Media, PA": "/locations/media-pa",
   };
 
   // ✅ Balanced FAQs for Allentown + Macungie + Emmaus
@@ -555,6 +560,61 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* AI WORKFLOWS */}
+      <Section id="ai" className="py-12 md:py-14">
+        <Title k="New · IT + AI" sub="Stop losing time and customers to busywork" />
+        <p className="text-slate-300 max-w-3xl" data-io="up">
+          Practical AI for local businesses, set up safely by the same team that protects your IT. We start with a free
+          30-minute IT + AI Checkup: you get a one-page report with your top 3 time and money leaks, your top 3 security
+          gaps, and what we would fix first with a fixed price.
+        </p>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          {[
+            {
+              t: "AI Front Desk",
+              d: "Missed calls get an instant text back. After-hours calls are answered and booked. Emergencies go straight to a person.",
+            },
+            {
+              t: "Follow-ups & Reviews",
+              d: "Every inquiry gets a fast reply, every estimate gets followed up, and every customer is asked for a review the compliant way.",
+            },
+            {
+              t: "Secure AI for Your Team",
+              d: "Copilot, Gemini, ChatGPT or Claude rolled out with the right permissions, a clear usage policy and hands-on training.",
+            },
+          ].map((c) => (
+            <Link
+              key={c.t}
+              href="/services/ai-workflows"
+              className="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-cyan-400/5"
+              data-io="up"
+            >
+              <h3 className="text-lg font-semibold text-slate-100">{c.t}</h3>
+              <p className="mt-2 text-sm text-slate-300">{c.d}</p>
+              <div className="mt-3 text-xs text-cyan-300">
+                How it works <span aria-hidden="true">→</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <div className="mt-8 flex flex-wrap gap-3" data-io="up">
+          <Link
+            href="/contact?type=assessment&source=home-ai"
+            className="inline-flex items-center gap-2 text-sm rounded-lg px-3 py-2 border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20 transition"
+          >
+            Book the free IT + AI Checkup <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link
+            href="/services/ai-workflows"
+            className="inline-flex items-center gap-2 text-sm rounded-lg px-3 py-2 border border-white/10 bg-white/5 hover:border-cyan-300/30 hover:bg-white/10 transition"
+          >
+            See AI Workflows <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </Section>
+
       {/* CASE STUDIES */}
       <Section id="wins" className="py-12 md:py-14">
         <Title k="Case Studies" sub="Outcomes your team actually feels" />
@@ -728,7 +788,7 @@ export default function HomePage() {
 
       {/* AREAS */}
       <Section id="areas" className="py-12 md:py-14">
-        <Title k="Areas we serve" sub="Onsite and remote IT support in Allentown, Macungie and Emmaus" />
+        <Title k="Areas we serve" sub="Onsite and remote support across the Lehigh Valley and Delaware County" />
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           {areas.map((a) => {
             const href = areaLinks[a] || "/areas";
