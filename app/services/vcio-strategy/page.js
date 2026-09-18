@@ -228,22 +228,6 @@ export default function Page() {
       { when: "Quarterly", title: "QBR / leadership review", desc: "KPIs, progress, and next-quarter plan" },
     ],
 
-    testimonials: [
-      {
-        quote: "The roadmap made priorities clear and helped leadership make faster decisions.",
-        author: "Business Owner",
-        role: "SMB (Allentown area)",
-        avatar: "/images/avatars/a4.svg",
-        rating: 5,
-      },
-      {
-        quote: "Renewals and vendor choices feel controlled now—no last-minute surprises.",
-        author: "Operations Lead",
-        role: "Local business",
-        avatar: "/images/avatars/a3.svg",
-        rating: 5,
-      },
-    ],
 
     faqs,
   };

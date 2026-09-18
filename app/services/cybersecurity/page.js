@@ -243,22 +243,6 @@ export default function Page() {
       { when: "Quarterly", title: "Review & drills", desc: "Tabletops + reporting + roadmap updates" },
     ],
 
-    testimonials: [
-      {
-        quote: "We finally got MFA and access policies consistent across the business—huge peace of mind.",
-        author: "Operations Lead",
-        role: "SMB (Allentown area)",
-        avatar: "/images/avatars/a3.svg",
-        rating: 5,
-      },
-      {
-        quote: "EDR visibility plus restore testing made our incident readiness feel real, not theoretical.",
-        author: "Managing Partner",
-        role: "Local firm",
-        avatar: "/images/avatars/a4.svg",
-        rating: 5,
-      },
-    ],
 
     faqs,
   };

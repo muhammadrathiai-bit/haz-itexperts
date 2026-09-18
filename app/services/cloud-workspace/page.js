@@ -220,22 +220,6 @@ export default function Page() {
       { when: "Week 7", title: "Harden", desc: "Governance + backup reporting + restore tests" },
     ],
 
-    testimonials: [
-      {
-        quote: "The migration was structured and calm—users stayed productive during the move.",
-        author: "Office Manager",
-        role: "SMB (Allentown area)",
-        avatar: "/images/avatars/a2.svg",
-        rating: 5,
-      },
-      {
-        quote: "Once sharing rules and ownership were fixed, files finally stayed organized and secure.",
-        author: "Operations Lead",
-        role: "Local business",
-        avatar: "/images/avatars/a1.svg",
-        rating: 5,
-      },
-    ],
 
     faqs,
   };

@@ -234,22 +234,6 @@ export default function Page() {
       { when: "Ongoing", title: "Improve", desc: "Exception reviews + policy tuning" },
     ],
 
-    testimonials: [
-      {
-        quote: "New device setup became consistent and predictable across the team.",
-        author: "IT Manager",
-        role: "SMB (Allentown area)",
-        avatar: "/images/avatars/a1.svg",
-        rating: 5,
-      },
-      {
-        quote: "Compliance reporting is clearer now, and exceptions are controlled properly.",
-        author: "Operations Lead",
-        role: "Local business",
-        avatar: "/images/avatars/a2.svg",
-        rating: 5,
-      },
-    ],
 
     faqs,
   };

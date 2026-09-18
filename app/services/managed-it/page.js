@@ -221,22 +221,6 @@ export default function Page() {
     ],
     compactTimeline: true,
 
-    testimonials: [
-      {
-        quote: "Onboarding went from days to hours, and tickets finally have ownership.",
-        author: "Operations Lead",
-        role: "SMB (Allentown area)",
-        avatar: "/images/avatars/a1.svg",
-        rating: 5,
-      },
-      {
-        quote: "The monthly KPIs made it easy to plan budgets and reduce recurring issues.",
-        author: "COO",
-        role: "Local business",
-        avatar: "/images/avatars/a2.svg",
-        rating: 5,
-      },
-    ],
 
     faqs,
   };

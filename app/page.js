@@ -623,7 +623,7 @@ export default function HomePage() {
 
       {/* CASE STUDIES */}
       <Section id="wins" className="py-12 md:py-14">
-        <Title k="Case Studies" sub="Outcomes your team actually feels" />
+        <Title k="How we work" sub="What well-run IT feels like day to day" />
         <div className="grid md:grid-cols-3 gap-6">
           <div data-io="up">
             <Collage
@@ -633,8 +633,8 @@ export default function HomePage() {
               ]}
             />
             <div className="mt-3">
-              <h3 className="font-medium">Faster P1 handling</h3>
-              <p className="text-sm text-slate-300">First response down to ≤12 min with SOPs and queue hygiene.</p>
+              <h3 className="font-medium">Urgent issues first</h3>
+              <p className="text-sm text-slate-300">Clear priorities, written procedures and a clean queue, so critical problems get a fast first response.</p>
             </div>
           </div>
 
@@ -655,7 +655,7 @@ export default function HomePage() {
             />
             <div className="mt-3">
               <h3 className="font-medium">Onboarding without chaos</h3>
-              <p className="text-sm text-slate-300">MDM baselines in 10 days; predictable new-hire workflow.</p>
+              <p className="text-sm text-slate-300">Device baselines and a predictable new-hire workflow, so day one just works.</p>
             </div>
           </div>
         </div>

@@ -225,22 +225,6 @@ export default function Page() {
       { when: "Week 7", title: "Handover", desc: "Docs, admin notes, support path" },
     ],
 
-    testimonials: [
-      {
-        quote: "The project plan was clear and the cutover went smoothly with minimal disruption.",
-        author: "Operations Lead",
-        role: "SMB (Allentown area)",
-        avatar: "/images/avatars/a3.svg",
-        rating: 5,
-      },
-      {
-        quote: "Runbooks and handover docs made it easy for our team to operate everything after delivery.",
-        author: "IT Coordinator",
-        role: "Local business",
-        avatar: "/images/avatars/a4.svg",
-        rating: 5,
-      },
-    ],
 
     faqs,
   };
