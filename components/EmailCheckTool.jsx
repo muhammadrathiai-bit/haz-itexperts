@@ -267,6 +267,17 @@ export default function EmailCheckTool({ source = "email-check" }) {
               >
                 Book the free Checkup <ArrowRight className="h-4 w-4" />
               </Link>
+              {needsHelp ? (
+                <Link
+                  href={`/lp/email-security-fix?source=${encodeURIComponent(source)}`}
+                  onClick={() =>
+                    track("email_check_fix_cta", { source, result_level: result.level, page_location: window.location.origin + window.location.pathname })
+                  }
+                  className="inline-flex items-center gap-2 text-sm rounded-lg px-3 py-2 border border-white/10 bg-white/5 hover:border-cyan-300/30 hover:bg-white/10 transition"
+                >
+                  Just want it fixed? $300 fixed price, done remotely <ArrowRight className="h-4 w-4" />
+                </Link>
+              ) : null}
               {!site?.hidePhone ? (
                 <a
                   href={phoneTel}
