@@ -601,7 +601,7 @@ export default function HomePage() {
 
         <div className="mt-8 flex flex-wrap gap-3" data-io="up">
           <Link
-            href="/contact?type=assessment&source=home-ai"
+            href="/lp/it-ai-checkup?source=home-ai"
             className="inline-flex items-center gap-2 text-sm rounded-lg px-3 py-2 border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20 transition"
           >
             Book the free IT + AI Checkup <ArrowRight className="h-4 w-4" />
@@ -611,6 +611,12 @@ export default function HomePage() {
             className="inline-flex items-center gap-2 text-sm rounded-lg px-3 py-2 border border-white/10 bg-white/5 hover:border-cyan-300/30 hover:bg-white/10 transition"
           >
             See AI Workflows <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link
+            href="/tools/email-security-check"
+            className="inline-flex items-center gap-2 text-sm rounded-lg px-3 py-2 border border-white/10 bg-white/5 hover:border-cyan-300/30 hover:bg-white/10 transition"
+          >
+            Free 10-second email security check <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </Section>

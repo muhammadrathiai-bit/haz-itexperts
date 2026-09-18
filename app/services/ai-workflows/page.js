@@ -118,7 +118,7 @@ export default function Page() {
         { label: "Media, PA", href: "/locations/media-pa", desc: "Law, accounting and county-seat offices." },
         { label: "Lehigh Valley", href: "/locations/allentown-pa", desc: "Allentown, Macungie and Emmaus (remote-first)." },
       ],
-      cta1: { label: "Book the free Checkup", href: "/contact?type=assessment&source=ai-workflows" },
+      cta1: { label: "Book the free Checkup", href: "/lp/it-ai-checkup?source=ai-workflows" },
       cta2: { label: "View all areas", href: "/areas" },
     },
 
@@ -257,7 +257,7 @@ export default function Page() {
     offers: {
       "@type": "Offer",
       name: "Free 30-minute IT + AI Checkup",
-      url: `${baseUrl}/contact?type=assessment&source=ai-workflows`,
+      url: `${baseUrl}/lp/it-ai-checkup?source=ai-workflows`,
       price: "0",
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",

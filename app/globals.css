@@ -10,6 +10,9 @@
   --safe-bottom: env(safe-area-inset-bottom, 0px);
 }
 
+/* The closed mobile menu sits off-screen to the right; keep it from widening the page on phones */
+html{ overflow-x: hidden; overflow-x: clip; }
+
 html, body{
   scroll-behavior: smooth;
   background: var(--bg);
