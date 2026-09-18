@@ -80,6 +80,7 @@ export default function Header({ className = "" }) {
   // Delaware County + AI pages book the IT + AI Checkup; everything else keeps the IT assessment offer
   const CHECKUP_PATHS = [
     "/lp/it-ai-checkup",
+    "/lp/email-security-fix",
     "/tools/",
     "/services/ai-workflows",
     "/locations/broomall-pa",

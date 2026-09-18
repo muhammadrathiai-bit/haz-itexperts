@@ -6,6 +6,7 @@ const nextConfig = {
       // Short links used on print and in person
       { source: "/checkup", destination: "/lp/it-ai-checkup?source=print", permanent: false },
       { source: "/check", destination: "/tools/email-security-check", permanent: false },
+      { source: "/fix", destination: "/lp/email-security-fix?source=short", permanent: false },
       // Brochure QR (first version) pointed at the contact page
       {
         source: "/contact",

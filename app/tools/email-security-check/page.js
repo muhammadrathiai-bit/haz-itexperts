@@ -151,6 +151,12 @@ export default function EmailSecurityCheckPage() {
               Book the free IT + AI Checkup →
             </Link>
             <Link
+              href="/lp/email-security-fix?source=email-check-page"
+              className="inline-flex items-center gap-2 text-sm rounded-lg px-4 py-2.5 border border-white/10 bg-white/5 hover:border-cyan-300/30 hover:bg-white/10 transition"
+            >
+              Email Security Fix-in-a-Day: $300 fixed price
+            </Link>
+            <Link
               href="/services/cybersecurity"
               className="inline-flex items-center gap-2 text-sm rounded-lg px-4 py-2.5 border border-white/10 bg-white/5 hover:border-cyan-300/30 hover:bg-white/10 transition"
             >
