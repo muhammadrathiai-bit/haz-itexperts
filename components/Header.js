@@ -77,8 +77,26 @@ export default function Header({ className = "" }) {
   const brandHref = isUk ? "/uk" : "/";
 
   // Primary CTA
-  const ctaHref = isUk ? "/uk/contact" : (site?.assessmentHref || "/lp/allentown#claim");
-  const ctaText = isUk ? "Book a Call" : "Free IT Assessment";
+  // Delaware County + AI pages book the IT + AI Checkup; everything else keeps the IT assessment offer
+  const CHECKUP_PATHS = [
+    "/lp/it-ai-checkup",
+    "/tools/",
+    "/services/ai-workflows",
+    "/locations/broomall-pa",
+    "/locations/newtown-square-pa",
+    "/locations/havertown-pa",
+    "/locations/springfield-pa",
+    "/locations/media-pa",
+  ];
+  const isCheckup = !isUk && CHECKUP_PATHS.some((p) => (pathname || "").startsWith(p));
+
+  const ctaHref = isUk
+    ? "/uk/contact"
+    : isCheckup
+    ? "/lp/it-ai-checkup?source=header#book"
+    : site?.assessmentHref || "/lp/allentown#claim";
+  const ctaText = isUk ? "Book a Call" : isCheckup ? "Free IT + AI Checkup" : "Free IT Assessment";
+  const ctaShort = isUk ? "Book Call" : isCheckup ? "Free Checkup" : "Free Assessment";
 
   // Secondary Quote
   const quoteHref = isUk ? "/uk/contact" : "/get-quote";
@@ -187,7 +205,7 @@ export default function Header({ className = "" }) {
             href={ctaHref}
             className="rounded-lg px-3 py-2 text-sm font-semibold border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20 transition"
           >
-            {isUk ? "Book Call" : "Free Assessment"}
+            {ctaShort}
           </Link>
 
           {/* Drawer */}
