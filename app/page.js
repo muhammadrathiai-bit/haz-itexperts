@@ -386,8 +386,10 @@ export default function HomePage() {
               <Pill href="/locations/allentown-pa">Allentown IT support</Pill>
               <Pill href="/locations/macungie-pa">Macungie IT support</Pill>
               <Pill href="/locations/emmaus-pa">Emmaus IT support</Pill>
+              <Pill href="/locations/broomall-pa">Broomall &amp; Delaware County</Pill>
               <Pill href="/services/managed-it">Managed IT</Pill>
               <Pill href="/services/cybersecurity">Cybersecurity</Pill>
+              <Pill href="/services/ai-workflows">New: AI Workflows</Pill>
             </div>
 
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
