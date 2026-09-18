@@ -306,6 +306,10 @@ export default async function LocationPage({ params }) {
   const slug = normalizeSlug(awaitedParams?.slug);
 
   const loc = getLocationBySlug(slug);
+  // Delaware County pages book the IT + AI Checkup; Lehigh Valley pages keep the IT assessment form
+  const DELCO_SLUGS = ["broomall-pa", "newtown-square-pa", "havertown-pa", "springfield-pa", "media-pa"];
+  const bookHref = (src) =>
+    DELCO_SLUGS.includes(loc?.slug) ? `/lp/it-ai-checkup?source=${src}` : `/contact?type=assessment&source=${src}`;
   if (!loc) notFound();
 
   const brand = site?.name || "Supreme IT Experts";
@@ -497,7 +501,7 @@ export default async function LocationPage({ params }) {
               (If you searched “IT support near me” in {loc.city}, this page is designed for that intent.)
             </span>{" "}
             <Link
-              href={`/contact?type=assessment&source=location-intent-${loc.slug}`}
+              href={bookHref(`location-intent-${loc.slug}`)}
               className="underline decoration-dotted underline-offset-2 hover:text-cyan-300"
             >
               Get a free 20-min assessment
@@ -526,7 +530,7 @@ export default async function LocationPage({ params }) {
 
               <div className="flex gap-3">
                 <Link
-                  href={`/contact?type=assessment&source=location-queries-${loc.slug}`}
+                  href={bookHref(`location-queries-${loc.slug}`)}
                   className="inline-flex items-center gap-2 text-sm rounded-lg px-4 py-2 border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20"
                 >
                   Free assessment <ArrowRight className="h-4 w-4" />
@@ -575,7 +579,7 @@ export default async function LocationPage({ params }) {
 
             <div className="flex flex-wrap gap-3">
               <Link
-                href={`/contact?type=assessment&source=location-${loc.slug}`}
+                href={bookHref(`location-${loc.slug}`)}
                 className="rounded-xl px-5 py-3 font-semibold border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20"
               >
                 Free 20-min assessment
@@ -606,7 +610,7 @@ export default async function LocationPage({ params }) {
 
               <div className="mt-5 flex flex-wrap gap-3">
                 <Link
-                  href={`/contact?type=assessment&source=location-${loc.slug}`}
+                  href={bookHref(`location-${loc.slug}`)}
                   className="inline-flex items-center gap-2 text-sm rounded-lg px-3 py-2 border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20"
                 >
                   {loc?.copy?.primaryCtaText || "Free 20-min IT assessment"} <ArrowRight className="h-4 w-4" />
@@ -705,7 +709,7 @@ export default async function LocationPage({ params }) {
 
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link
-                  href={`/contact?type=assessment&source=location-sections-${loc.slug}`}
+                  href={bookHref(`location-sections-${loc.slug}`)}
                   className="inline-flex items-center gap-2 text-sm rounded-lg px-4 py-2 border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20"
                 >
                   Free assessment <ArrowRight className="h-4 w-4" />
@@ -903,7 +907,7 @@ export default async function LocationPage({ params }) {
               </Link>
 
               <Link
-                href={`/contact?type=assessment&source=location-${loc.slug}`}
+                href={bookHref(`location-${loc.slug}`)}
                 className="inline-flex items-center gap-2 text-sm rounded-lg px-3 py-2 border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20"
               >
                 Request an assessment <ArrowRight className="h-4 w-4" />
