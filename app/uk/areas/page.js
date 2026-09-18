@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import { site } from "@/lib/siteConfig";
 import { BASE_URL, BUSINESS_ID } from "@/lib/seoIds";
-import { SERVICES } from "@/lib/services";
+import { UK_SERVICES as SERVICES } from "@/lib/services";
 import { ArrowRight, CheckCircle2, MapPin } from "lucide-react";
 
 export async function generateMetadata() {

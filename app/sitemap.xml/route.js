@@ -19,6 +19,7 @@ export async function GET() {
     { loc: `${base}/services/device-management`, changefreq: "monthly", priority: 0.7 },
     { loc: `${base}/services/projects-consulting`, changefreq: "monthly", priority: 0.7 },
     { loc: `${base}/services/vcio-strategy`, changefreq: "monthly", priority: 0.7 },
+    { loc: `${base}/services/ai-workflows`, changefreq: "weekly", priority: 0.8 },
 
     { loc: `${base}/faqs`, changefreq: "monthly", priority: 0.6 },
     { loc: `${base}/areas`, changefreq: "monthly", priority: 0.6 },
@@ -28,6 +29,11 @@ export async function GET() {
     { loc: `${base}/locations/allentown-pa`, changefreq: "monthly", priority: 0.6 },
     { loc: `${base}/locations/macungie-pa`, changefreq: "monthly", priority: 0.6 },
     { loc: `${base}/locations/emmaus-pa`, changefreq: "monthly", priority: 0.6 },
+    { loc: `${base}/locations/broomall-pa`, changefreq: "monthly", priority: 0.7 },
+    { loc: `${base}/locations/newtown-square-pa`, changefreq: "monthly", priority: 0.7 },
+    { loc: `${base}/locations/havertown-pa`, changefreq: "monthly", priority: 0.7 },
+    { loc: `${base}/locations/springfield-pa`, changefreq: "monthly", priority: 0.7 },
+    { loc: `${base}/locations/media-pa`, changefreq: "monthly", priority: 0.7 },
 
     // ✅ Landing page
     { loc: `${base}/lp/allentown`, changefreq: "weekly", priority: 0.8 },

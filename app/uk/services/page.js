@@ -5,7 +5,7 @@ import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { BASE_URL, BUSINESS_ID } from "@/lib/seoIds";
-import { SERVICES } from "@/lib/services";
+import { UK_SERVICES as SERVICES } from "@/lib/services";
 
 export async function generateMetadata() {
   const brand = site?.name || "Supreme IT Experts";

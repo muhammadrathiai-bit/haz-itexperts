@@ -191,6 +191,20 @@ export default async function ServicesPage() {
       ],
       href: "/services/vcio-strategy",
     },
+    {
+      key: "ai",
+      icon: Sparkles,
+      title: "AI Workflows & Automation",
+      tier: { label: "New", tone: "emerald" },
+      desc: "Practical AI for local businesses — missed calls, follow-ups, reviews and paperwork — set up safely by your IT and security team.",
+      bullets: ["AI front desk", "Follow-up automation", "Secure AI rollout"],
+      deep: [
+        ["AI Front Desk", "Missed-call text-back, after-hours answering and booking on your own number."],
+        ["Follow-ups & Reviews", "Fast lead replies, estimate follow-up, and compliant review requests."],
+        ["Secure AI Rollout", "Copilot, Gemini, ChatGPT or Claude with permissions cleanup, policy and training."],
+      ],
+      href: "/services/ai-workflows",
+    },
   ];
 
   const servicesForClient = services.map(({ key, title, desc, bullets, deep, href }) => ({
