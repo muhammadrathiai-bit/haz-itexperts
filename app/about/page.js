@@ -169,7 +169,7 @@ export default function AboutPage() {
 
   const leaders = [
     {
-      name: "Muhammad Barkat Rathi",
+      name: "Muhammad Barkat Saifee",
       role: "Founder & CEO",
       subtitle: "Leadership • Strategy • Client Success",
       img: "/team/leader-barkat.png",
