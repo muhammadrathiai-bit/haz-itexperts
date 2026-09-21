@@ -10,9 +10,9 @@ export async function generateMetadata() {
   const brand = site?.name || "Supreme IT Experts";
   const canonical = `${BASE_URL}/lp/it-ai-checkup`;
   // Keep brand out (layout template already adds it)
-  const title = "Free 30-Minute IT + AI Checkup for Local Businesses — Broomall & Delaware County";
+  const title = "Free 30-Minute IT + AI Checkup for Local Businesses — Havertown, Broomall & Delaware County";
   const description =
-    "A free 30-minute onsite visit. You get a one-page report: your top 3 time and money leaks, your top 3 security gaps, and what we would fix first at a fixed price. No obligation.";
+    "A free 30-minute Checkup by video call, phone or onsite, with early-evening and Saturday times. You get a one-page report: your top 3 time and money leaks, your top 3 security gaps, and what we would fix first at a fixed price. No obligation.";
   const ogImage = `${BASE_URL}/og-image.png?v=7`;
 
   return {
@@ -42,7 +42,7 @@ const GET = [
 ];
 
 const STEPS = [
-  { Icon: Clock, t: "30 minutes, at your place", d: "We come to you, at a time that suits the owner or office manager. No laptops to hand over, no passwords needed." },
+  { Icon: Clock, t: "30 minutes, your way", d: "By video call, by phone, or onsite in Delaware County. Early-evening and Saturday times are available, so you do not have to stop work for it. No laptops to hand over, no passwords needed." },
   { Icon: ShieldCheck, t: "We look and we ask", d: "How calls, leads, email and paperwork flow today, plus a check of the public security records for your domain." },
   { Icon: FileText, t: "One page, in plain English", d: "Within 48 hours you get the report. If your setup is solid, it says so. If something needs fixing, you see the price first." },
 ];
@@ -95,14 +95,14 @@ export default function ItAiCheckupLanding() {
         <div className="max-w-6xl mx-auto px-4 pt-12 md:pt-16 pb-12">
           <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-start">
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-cyan-300/80">Free · 30 minutes · onsite in Delaware County</div>
+              <div className="text-xs uppercase tracking-[0.2em] text-cyan-300/80">Free · 30 minutes · video, phone or onsite</div>
               <h1 className="mt-3 text-3xl md:text-5xl font-extrabold leading-[1.08]">
                 The free{" "}
                 <span className="bg-gradient-to-r from-cyan-300 to-violet-300 bg-clip-text text-transparent">IT + AI Checkup</span>
               </h1>
               <p className="mt-4 text-slate-200 max-w-[62ch]">
                 Find out where your business is losing time, losing customers, or taking a risk it does not know about.
-                One short visit, one plain page, no obligation.
+                One short conversation, one plain page, no obligation.
               </p>
 
               <ul className="mt-6 space-y-3">
@@ -132,7 +132,7 @@ export default function ItAiCheckupLanding() {
               <LeadFormSimple
                 source={source}
                 title="Book your free Checkup"
-                sub="Tell us the best day and time. We confirm by email or phone within one business day."
+                sub="Tell us the best day and time. Early evenings and Saturdays are fine. We confirm by email or phone within one business day."
                 cta="Request my Checkup"
                 defaultSubject="Free IT + AI Checkup request"
               />

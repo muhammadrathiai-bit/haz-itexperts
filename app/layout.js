@@ -26,7 +26,7 @@ const sameAs = uniq(Object.values(site?.socials || {}).filter(Boolean));
 // ✅ Clean address: DO NOT include undefined keys in JSON-LD
 const address = {
   "@type": "PostalAddress",
-  addressLocality: site?.address?.addressLocality || "Allentown",
+  addressLocality: site?.address?.addressLocality || "Havertown",
   addressRegion: site?.address?.addressRegion || "PA",
   addressCountry: site?.address?.addressCountry || "US",
 
@@ -120,7 +120,7 @@ export default function RootLayout({ children }) {
         name: BRAND,
         url: `${BASE_URL}/`,
         description:
-          "Managed IT services and cybersecurity for small and mid-sized businesses in Allentown, Macungie, and Emmaus, PA.",
+          "Managed IT services, cybersecurity and practical AI automation for small and mid-sized businesses in Delaware County and the Lehigh Valley, PA.",
         telephone: phoneE164,
         email,
         priceRange: "$$",
@@ -128,7 +128,7 @@ export default function RootLayout({ children }) {
         logo: new URL("/logo.png", BASE_URL).toString(),
         sameAs,
         address,
-        areaServed: ["Allentown, PA", "Macungie, PA", "Emmaus, PA"],
+        areaServed: site?.areas?.length ? site.areas : ["Havertown, PA", "Broomall, PA", "Allentown, PA"],
 
         contactPoint: [
           {
