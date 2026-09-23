@@ -1,6 +1,6 @@
 // app/lp/it-ai-checkup/page.js
 import Link from "next/link";
-import { CheckCircle2, Clock, FileText, ShieldCheck, Phone } from "lucide-react";
+import { CalendarClock, CheckCircle2, Clock, FileText, ShieldCheck, Phone } from "lucide-react";
 import { site } from "@/lib/siteConfig";
 import { BASE_URL } from "@/lib/seoIds";
 import LeadFormSimple from "@/components/LeadFormSimple";
@@ -115,6 +115,15 @@ export default function ItAiCheckupLanding() {
               </ul>
 
               <div className="mt-7 flex flex-wrap items-center gap-3 text-sm">
+                {/* /book redirects to the Google Calendar booking page (next.config.mjs) */}
+                <a
+                  href="/book"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg px-3 py-2 font-semibold text-slate-950 bg-cyan-300 hover:bg-cyan-200 transition"
+                >
+                  <CalendarClock className="h-4 w-4" /> Pick a time now
+                </a>
                 <TrackedPhoneLink
                   phone={phone}
                   source={source}
@@ -136,6 +145,12 @@ export default function ItAiCheckupLanding() {
                 cta="Request my Checkup"
                 defaultSubject="Free IT + AI Checkup request"
               />
+              <p className="mt-3 text-sm text-slate-300">
+                Rather pick a slot yourself?{" "}
+                <a href="/book" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:underline">
+                  See open times and book in one step →
+                </a>
+              </p>
             </div>
           </div>
         </div>
@@ -199,12 +214,20 @@ export default function ItAiCheckupLanding() {
             </details>
           ))}
         </div>
-        <div className="mt-8">
+        <div className="mt-8 flex flex-wrap items-center gap-3">
+          <a
+            href="/book"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-semibold rounded-lg px-4 py-2.5 text-slate-950 bg-cyan-300 hover:bg-cyan-200 transition"
+          >
+            <CalendarClock className="h-4 w-4" /> Pick a time now
+          </a>
           <a
             href="#book"
             className="inline-flex items-center gap-2 text-sm rounded-lg px-4 py-2.5 border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20 transition"
           >
-            Book the free Checkup ↑
+            Or send a request ↑
           </a>
         </div>
       </section>
