@@ -107,13 +107,13 @@ export default function Page() {
     hero: "/images/services/ai-hero.svg",
 
     localLinks: {
-      eyebrow: "We come to you",
+      eyebrow: "By video, phone or onsite",
       title: "Free 30-minute IT + AI Checkup",
-      desc: "Onsite in Delaware County and the Main Line, remote everywhere else. You get a one-page report in 48 hours: your top 3 time and money leaks, your top 3 security gaps, and what we would fix first with a fixed price.",
+      desc: "By video call or phone anywhere, and onsite in Delaware County and the Main Line. Early-evening and Saturday times are available. You get a one-page report in 48 hours: your top 3 time and money leaks, your top 3 security gaps, and what we would fix first with a fixed price.",
       items: [
-        { label: "Broomall, PA", href: "/locations/broomall-pa", desc: "Our home base. Onsite checkups." },
+        { label: "Broomall, PA", href: "/locations/broomall-pa", desc: "Trades offices and professional suites." },
         { label: "Newtown Square, PA", href: "/locations/newtown-square-pa", desc: "Offices and trades along West Chester Pike." },
-        { label: "Havertown, PA", href: "/locations/havertown-pa", desc: "Contractors, practices and local shops." },
+        { label: "Havertown, PA", href: "/locations/havertown-pa", desc: "Our home base. Contractors, practices and local shops." },
         { label: "Springfield, PA", href: "/locations/springfield-pa", desc: "Retail, auto and professional offices." },
         { label: "Media, PA", href: "/locations/media-pa", desc: "Law, accounting and county-seat offices." },
         { label: "Lehigh Valley", href: "/locations/allentown-pa", desc: "Allentown, Macungie and Emmaus (remote-first)." },
@@ -183,7 +183,7 @@ export default function Page() {
     steps: [
       {
         title: "Free Checkup",
-        desc: "30 minutes at your place. We look at how calls, scheduling and paperwork really flow, plus a quick security check. No access to your files needed.",
+        desc: "30 minutes by video call, phone or onsite. We look at how calls, scheduling and paperwork really flow, plus a quick security check. No access to your files needed.",
         outputs: ["One-page report in 48 hours", "Top 3 time and money leaks", "Top 3 security gaps"],
       },
       {
@@ -223,7 +223,7 @@ export default function Page() {
     ],
 
     timeline: [
-      { when: "Day 1", title: "Free Checkup", desc: "Onsite walk-through + quick security check" },
+      { when: "Day 1", title: "Free Checkup", desc: "30-minute walk-through + quick security check" },
       { when: "48 hours", title: "One-page report", desc: "Leaks, gaps, first fix with a fixed price" },
       { when: "Weeks 1–3", title: "Build, test, go live", desc: "Human review for the first two weeks" },
     ],

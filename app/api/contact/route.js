@@ -20,6 +20,9 @@ const SITE_URL = (process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || "h
 // Default landing page (absolute)
 const LP = new URL("/ads/allentown-it-support", SITE_URL).toString();
 
+// Self-booking short link (redirects to the Google Calendar booking page, see next.config.mjs)
+const BOOK_URL = new URL("/book", SITE_URL).toString();
+
 // --- utils ---
 function esc(s = "") {
   return String(s)
@@ -145,7 +148,7 @@ export async function POST(req) {
       subject,
       text,
       html,
-      reply_to: email,
+      replyTo: email,
     });
 
     // Auto-reply (best-effort)
@@ -158,12 +161,17 @@ export async function POST(req) {
 
 Thanks for reaching out. We received your message and will get back shortly.
 
+If you would rather pick a time for your free 30-minute call yourself, early evenings and Saturday mornings are open here:
+${BOOK_URL}
+
 — Supreme IT Experts
 Phone: +1 610-500-9209`,
         html: `
           <div style="font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;line-height:1.5">
             <p>Hi ${esc(name) || "there"},</p>
             <p>Thanks for reaching out. We received your message and will get back shortly.</p>
+            <p>If you would rather pick a time for your free 30-minute call yourself, early evenings and Saturday mornings are open here:
+               <a href="${esc(BOOK_URL)}">${esc(BOOK_URL.replace(/^https:\/\//, ""))}</a></p>
             <p style="margin:12px 0 0 0">— <strong>Supreme IT Experts</strong><br/>Phone: +1 610-500-9209</p>
           </div>
         `,

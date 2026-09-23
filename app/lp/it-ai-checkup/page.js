@@ -1,6 +1,6 @@
 // app/lp/it-ai-checkup/page.js
 import Link from "next/link";
-import { CheckCircle2, Clock, FileText, ShieldCheck, Phone } from "lucide-react";
+import { CalendarClock, CheckCircle2, Clock, FileText, ShieldCheck, Phone } from "lucide-react";
 import { site } from "@/lib/siteConfig";
 import { BASE_URL } from "@/lib/seoIds";
 import LeadFormSimple from "@/components/LeadFormSimple";
@@ -10,9 +10,9 @@ export async function generateMetadata() {
   const brand = site?.name || "Supreme IT Experts";
   const canonical = `${BASE_URL}/lp/it-ai-checkup`;
   // Keep brand out (layout template already adds it)
-  const title = "Free 30-Minute IT + AI Checkup for Local Businesses — Broomall & Delaware County";
+  const title = "Free 30-Minute IT + AI Checkup for Local Businesses — Havertown, Broomall & Delaware County";
   const description =
-    "A free 30-minute onsite visit. You get a one-page report: your top 3 time and money leaks, your top 3 security gaps, and what we would fix first at a fixed price. No obligation.";
+    "A free 30-minute Checkup by video call, phone or onsite, with early-evening and Saturday times. You get a one-page report: your top 3 time and money leaks, your top 3 security gaps, and what we would fix first at a fixed price. No obligation.";
   const ogImage = `${BASE_URL}/og-image.png?v=7`;
 
   return {
@@ -42,7 +42,7 @@ const GET = [
 ];
 
 const STEPS = [
-  { Icon: Clock, t: "30 minutes, at your place", d: "We come to you, at a time that suits the owner or office manager. No laptops to hand over, no passwords needed." },
+  { Icon: Clock, t: "30 minutes, your way", d: "By video call, by phone, or onsite in Delaware County. Early-evening and Saturday times are available, so you do not have to stop work for it. No laptops to hand over, no passwords needed." },
   { Icon: ShieldCheck, t: "We look and we ask", d: "How calls, leads, email and paperwork flow today, plus a check of the public security records for your domain." },
   { Icon: FileText, t: "One page, in plain English", d: "Within 48 hours you get the report. If your setup is solid, it says so. If something needs fixing, you see the price first." },
 ];
@@ -95,14 +95,14 @@ export default function ItAiCheckupLanding() {
         <div className="max-w-6xl mx-auto px-4 pt-12 md:pt-16 pb-12">
           <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-start">
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-cyan-300/80">Free · 30 minutes · onsite in Delaware County</div>
+              <div className="text-xs uppercase tracking-[0.2em] text-cyan-300/80">Free · 30 minutes · video, phone or onsite</div>
               <h1 className="mt-3 text-3xl md:text-5xl font-extrabold leading-[1.08]">
                 The free{" "}
                 <span className="bg-gradient-to-r from-cyan-300 to-violet-300 bg-clip-text text-transparent">IT + AI Checkup</span>
               </h1>
               <p className="mt-4 text-slate-200 max-w-[62ch]">
                 Find out where your business is losing time, losing customers, or taking a risk it does not know about.
-                One short visit, one plain page, no obligation.
+                One short conversation, one plain page, no obligation.
               </p>
 
               <ul className="mt-6 space-y-3">
@@ -115,6 +115,15 @@ export default function ItAiCheckupLanding() {
               </ul>
 
               <div className="mt-7 flex flex-wrap items-center gap-3 text-sm">
+                {/* /book redirects to the Google Calendar booking page (next.config.mjs) */}
+                <a
+                  href="/book"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg px-3 py-2 font-semibold text-slate-950 bg-cyan-300 hover:bg-cyan-200 transition"
+                >
+                  <CalendarClock className="h-4 w-4" /> Pick a time now
+                </a>
                 <TrackedPhoneLink
                   phone={phone}
                   source={source}
@@ -132,10 +141,16 @@ export default function ItAiCheckupLanding() {
               <LeadFormSimple
                 source={source}
                 title="Book your free Checkup"
-                sub="Tell us the best day and time. We confirm by email or phone within one business day."
+                sub="Tell us the best day and time. Early evenings and Saturdays are fine. We confirm by email or phone within one business day."
                 cta="Request my Checkup"
                 defaultSubject="Free IT + AI Checkup request"
               />
+              <p className="mt-3 text-sm text-slate-300">
+                Rather pick a slot yourself?{" "}
+                <a href="/book" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:underline">
+                  See open times and book in one step →
+                </a>
+              </p>
             </div>
           </div>
         </div>
@@ -199,12 +214,20 @@ export default function ItAiCheckupLanding() {
             </details>
           ))}
         </div>
-        <div className="mt-8">
+        <div className="mt-8 flex flex-wrap items-center gap-3">
+          <a
+            href="/book"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-semibold rounded-lg px-4 py-2.5 text-slate-950 bg-cyan-300 hover:bg-cyan-200 transition"
+          >
+            <CalendarClock className="h-4 w-4" /> Pick a time now
+          </a>
           <a
             href="#book"
             className="inline-flex items-center gap-2 text-sm rounded-lg px-4 py-2.5 border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20 transition"
           >
-            Book the free Checkup ↑
+            Or send a request ↑
           </a>
         </div>
       </section>
