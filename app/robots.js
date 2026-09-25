@@ -15,6 +15,8 @@ export default function robots() {
   const disallow = [];
   // UK rollout OFF ho to /uk/ block
   if (!ukOn) disallow.push("/uk/");
+  // Co-brandable partner give-aways (sent to referral partners by link; not meant for search results)
+  disallow.push("/partners/");
 
   // ✅ Blog ko allow karna hai — so blog disallow REMOVE
 
