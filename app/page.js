@@ -5,6 +5,7 @@ import Script from "next/script";
 import { Suspense } from "react";
 import HomeFX from "@/components/HomeFX";
 import ClientOfferPopup from "@/components/ClientOfferPopup";
+import GoogleReviews from "@/components/GoogleReviews";
 import { site } from "@/lib/siteConfig";
 import { BASE_URL, BUSINESS_ID } from "@/lib/seoIds";
 import {
@@ -735,6 +736,12 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+      </Section>
+
+      {/* GOOGLE REVIEWS */}
+      <Section id="reviews" className="py-12 md:py-14">
+        <Title k="Reviews" sub="What people say on Google" />
+        <GoogleReviews heading={null} />
       </Section>
 
       {/* FAQ */}
