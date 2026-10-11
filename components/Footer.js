@@ -73,7 +73,7 @@ export default function Footer({ className = "" }) {
 
   const hoursText = isUk
     ? "Mon–Fri 9:00 AM – 6:00 PM (UK) • Support available"
-    : "Mon–Fri 9:00 AM – 6:00 PM ET • 24/7 Emergency Support";
+    : "Mon–Fri 9:00 AM – 6:00 PM ET • Calls answered around the clock";
 
   return (
     <footer className={`site-footer mt-12 bg-[#0b1220] border-t border-white/10 ${className}`}>
@@ -120,6 +120,20 @@ export default function Footer({ className = "" }) {
             </div>
 
             <div className="text-xs text-slate-200">{hoursText}</div>
+
+            {!isUk ? (
+              <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                <Link href="/plans" className="text-slate-200 hover:text-cyan-300 transition">
+                  Plans &amp; prices
+                </Link>
+                <Link href="/plans/soho" className="text-slate-200 hover:text-cyan-300 transition">
+                  Small office plan
+                </Link>
+                <Link href="/plans/personal" className="text-slate-200 hover:text-cyan-300 transition">
+                  Home computer plan
+                </Link>
+              </div>
+            ) : null}
 
             {/* ✅ Footer region switch — only if UK enabled */}
             {UK_ENABLED && (

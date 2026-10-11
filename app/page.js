@@ -560,6 +560,60 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* PLANS */}
+      <Section id="plans" className="py-12 md:py-14">
+        <Title k="Plans" sub="Clear monthly prices, for offices and for home" />
+        <p className="text-slate-300 max-w-3xl" data-io="up">
+          Every plan keeps your computers watched, updated and protected, with a real person to call. You see the
+          price before you sign anything.
+        </p>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          {[
+            {
+              href: "/plans/soho",
+              k: "Small office · home office",
+              t: "SupremeCare SOHO",
+              p: "From $50",
+              u: "per computer, per month",
+              d: "For up to 9 people. Monitoring, updates and protection on every computer, with remote help when you need it.",
+            },
+            {
+              href: "/plans/personal",
+              k: "Home computers",
+              t: "SupremeCare Personal",
+              p: "From $36",
+              u: "per computer, per month",
+              d: "Patient help in plain words. Retired seniors and students pay from $32 a month.",
+            },
+            {
+              href: "/plans",
+              k: "10 or more people",
+              t: "SupremeCare",
+              p: "From $47",
+              u: "per user, per month",
+              d: "Fully managed IT for a growing office, quoted after a free 30-minute IT + AI Checkup.",
+            },
+          ].map((c) => (
+            <Link
+              key={c.href}
+              href={c.href}
+              data-io="up"
+              className="group rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-cyan-300/30 hover:bg-cyan-400/5 transition"
+            >
+              <div className="text-xs uppercase tracking-[0.18em] text-cyan-300/80">{c.k}</div>
+              <div className="mt-2 text-lg font-semibold text-slate-100">{c.t}</div>
+              <div className="mt-3 text-3xl font-extrabold text-slate-100">{c.p}</div>
+              <div className="text-sm text-slate-300">{c.u}</div>
+              <p className="mt-3 text-sm text-slate-300">{c.d}</p>
+              <span className="mt-4 inline-flex items-center gap-1 text-sm text-cyan-300 group-hover:underline">
+                See what is included <ArrowRight className="h-4 w-4" />
+              </span>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
       {/* AI WORKFLOWS */}
       <Section id="ai" className="py-12 md:py-14">
         <Title k="New · IT + AI" sub="Stop losing time and customers to busywork" />

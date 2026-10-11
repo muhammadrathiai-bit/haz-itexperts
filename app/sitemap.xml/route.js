@@ -21,6 +21,10 @@ export async function GET() {
     { loc: `${base}/services/vcio-strategy`, changefreq: "monthly", priority: 0.7 },
     { loc: `${base}/services/ai-workflows`, changefreq: "weekly", priority: 0.8 },
 
+    { loc: `${base}/plans`, changefreq: "monthly", priority: 0.8 },
+    { loc: `${base}/plans/soho`, changefreq: "monthly", priority: 0.8 },
+    { loc: `${base}/plans/personal`, changefreq: "monthly", priority: 0.8 },
+
     { loc: `${base}/faqs`, changefreq: "monthly", priority: 0.6 },
     { loc: `${base}/areas`, changefreq: "monthly", priority: 0.6 },
     { loc: `${base}/gallery`, changefreq: "monthly", priority: 0.5 },

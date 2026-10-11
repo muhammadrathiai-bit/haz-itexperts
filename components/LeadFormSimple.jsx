@@ -31,6 +31,8 @@ export default function LeadFormSimple({
   compact = false,
   className = "",
   defaultSubject = "Website Contact",
+  personal = false, // a private person, not a company: no company field, plain "Email" label
+  messagePlaceholder = "",
 }) {
   const hidePhone = site?.hidePhone;
   const email = site?.email ?? "support@supremeitexperts.com";
@@ -61,7 +63,7 @@ export default function LeadFormSimple({
   const validate = () => {
     const next = {};
     if (!form.name.trim()) next.name = "Enter your name.";
-    if (!form.company.trim()) next.company = "Enter company name.";
+    if (!personal && !form.company.trim()) next.company = "Enter company name.";
     if (!form.workEmail.trim()) next.workEmail = "Enter your email.";
     else if (!/\S+@\S+\.\S+/.test(form.workEmail.trim())) next.workEmail = "Enter a valid email.";
     if (!form.message.trim()) next.message = "Write 1–2 lines about what you need.";
@@ -73,7 +75,7 @@ export default function LeadFormSimple({
   const payload = useMemo(() => {
     return {
       name: form.name,
-      company: form.company,
+      company: personal ? "Home user" : form.company,
       email: form.workEmail,
       phone: form.phone,
       message: form.message,
@@ -81,7 +83,7 @@ export default function LeadFormSimple({
       page: typeof window !== "undefined" ? window.location.href : "",
       tz: "America/New_York",
     };
-  }, [form, source]);
+  }, [form, source, personal]);
 
   const onSubmit = async (e) => {
     e?.preventDefault();
@@ -113,10 +115,10 @@ export default function LeadFormSimple({
     } catch {
       gaTrack("contact_submit", { source, form: "simple", fallback: "mailto" });
 
-      const subject = `${defaultSubject} — ${form.company}`;
+      const subject = personal ? `${defaultSubject} — ${form.name}` : `${defaultSubject} — ${form.company}`;
       const bodyLines = [
         `Name: ${form.name}`,
-        `Company: ${form.company}`,
+        `Company: ${personal ? "Home user" : form.company}`,
         `Email: ${form.workEmail}`,
         `Phone: ${form.phone || "-"}`,
         "",
@@ -214,23 +216,25 @@ export default function LeadFormSimple({
               {errors.name ? <p className="mt-1 text-xs text-red-400">{errors.name}</p> : null}
             </div>
 
-            <div>
-              <label className="text-xs text-slate-400">Company</label>
-              <input
-                className={cx(
-                  "mt-1 w-full rounded-lg bg-transparent border px-3 py-2 text-sm outline-none",
-                  errors.company ? "border-red-500/70" : "border-white/20 focus:border-cyan-300/50"
-                )}
-                value={form.company}
-                onChange={(e) => update("company", e.target.value)}
-                placeholder="Company name"
-                autoComplete="organization"
-              />
-              {errors.company ? <p className="mt-1 text-xs text-red-400">{errors.company}</p> : null}
-            </div>
+            {!personal ? (
+              <div>
+                <label className="text-xs text-slate-400">Company</label>
+                <input
+                  className={cx(
+                    "mt-1 w-full rounded-lg bg-transparent border px-3 py-2 text-sm outline-none",
+                    errors.company ? "border-red-500/70" : "border-white/20 focus:border-cyan-300/50"
+                  )}
+                  value={form.company}
+                  onChange={(e) => update("company", e.target.value)}
+                  placeholder="Company name"
+                  autoComplete="organization"
+                />
+                {errors.company ? <p className="mt-1 text-xs text-red-400">{errors.company}</p> : null}
+              </div>
+            ) : null}
 
             <div>
-              <label className="text-xs text-slate-400">Work email</label>
+              <label className="text-xs text-slate-400">{personal ? "Email" : "Work email"}</label>
               <input
                 className={cx(
                   "mt-1 w-full rounded-lg bg-transparent border px-3 py-2 text-sm outline-none",
@@ -238,7 +242,7 @@ export default function LeadFormSimple({
                 )}
                 value={form.workEmail}
                 onChange={(e) => update("workEmail", e.target.value)}
-                placeholder="you@company.com"
+                placeholder={personal ? "you@example.com" : "you@company.com"}
                 autoComplete="email"
                 type="email"
               />
@@ -269,7 +273,10 @@ export default function LeadFormSimple({
               rows={5}
               value={form.message}
               onChange={(e) => update("message", e.target.value)}
-              placeholder="Example: Email security + backups + helpdesk. Users ~40. Want a quick audit and 90-day plan."
+              placeholder={
+                messagePlaceholder ||
+                "Example: Email security + backups + helpdesk. Users ~40. Want a quick audit and 90-day plan."
+              }
             />
             {errors.message ? <p className="mt-1 text-xs text-red-400">{errors.message}</p> : null}
           </div>

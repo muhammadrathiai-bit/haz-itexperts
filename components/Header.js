@@ -10,6 +10,7 @@ const US_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
+  { href: "/plans", label: "Plans" },
   { href: "/faqs", label: "FAQs" },
   { href: "/areas", label: "Areas" },
   { href: "/blog", label: "Blog" },
@@ -66,7 +67,7 @@ export default function Header({ className = "" }) {
   const LINKS = isUk ? UK_LINKS : US_LINKS;
 
   // ✅ prevent wrap: lg show fewer links, xl show all
-  const LINKS_LG = LINKS.filter((l) => !["/gallery", "/areas", "/uk/areas"].includes(l.href));
+  const LINKS_LG = LINKS.filter((l) => !["/gallery", "/areas", "/faqs", "/uk/areas"].includes(l.href));
   const LINKS_XL = LINKS;
 
   const isActive = (href) => {
