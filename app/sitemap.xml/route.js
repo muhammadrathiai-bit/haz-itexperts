@@ -30,7 +30,6 @@ export async function GET() {
     { loc: `${base}/locations/macungie-pa`, changefreq: "monthly", priority: 0.6 },
     { loc: `${base}/locations/emmaus-pa`, changefreq: "monthly", priority: 0.6 },
     { loc: `${base}/locations/broomall-pa`, changefreq: "monthly", priority: 0.7 },
-    { loc: `${base}/locations/newtown-square-pa`, changefreq: "monthly", priority: 0.7 },
     { loc: `${base}/locations/havertown-pa`, changefreq: "monthly", priority: 0.7 },
     { loc: `${base}/locations/springfield-pa`, changefreq: "monthly", priority: 0.7 },
     { loc: `${base}/locations/media-pa`, changefreq: "monthly", priority: 0.7 },

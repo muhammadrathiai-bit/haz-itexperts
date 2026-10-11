@@ -274,7 +274,6 @@ export default function HomePage() {
     "Macungie, PA": "/locations/macungie-pa",
     "Emmaus, PA": "/locations/emmaus-pa",
     "Broomall, PA": "/locations/broomall-pa",
-    "Newtown Square, PA": "/locations/newtown-square-pa",
     "Havertown, PA": "/locations/havertown-pa",
     "Springfield, PA": "/locations/springfield-pa",
     "Media, PA": "/locations/media-pa",

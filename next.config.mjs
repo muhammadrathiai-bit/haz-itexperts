@@ -7,6 +7,8 @@ const nextConfig = {
       { source: "/checkup", destination: "/lp/it-ai-checkup?source=print", permanent: false },
       { source: "/check", destination: "/tools/email-security-check", permanent: false },
       { source: "/fix", destination: "/lp/email-security-fix?source=short", permanent: false },
+      // Location page retired Oct 2026
+      { source: "/locations/newtown-square-pa", destination: "/areas", permanent: false },
       // Self-booking page for the free Checkup (Google Calendar appointment schedule on supremeitexperts@gmail.com)
       {
         source: "/book",

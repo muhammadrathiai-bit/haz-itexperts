@@ -307,7 +307,7 @@ export default async function LocationPage({ params }) {
 
   const loc = getLocationBySlug(slug);
   // Delaware County pages book the IT + AI Checkup; Lehigh Valley pages keep the IT assessment form
-  const DELCO_SLUGS = ["broomall-pa", "newtown-square-pa", "havertown-pa", "springfield-pa", "media-pa"];
+  const DELCO_SLUGS = ["broomall-pa", "havertown-pa", "springfield-pa", "media-pa"];
   const bookHref = (src) =>
     DELCO_SLUGS.includes(loc?.slug) ? `/lp/it-ai-checkup?source=${src}` : `/contact?type=assessment&source=${src}`;
   if (!loc) notFound();
