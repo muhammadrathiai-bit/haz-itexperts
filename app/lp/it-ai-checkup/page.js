@@ -5,6 +5,7 @@ import { site } from "@/lib/siteConfig";
 import { BASE_URL } from "@/lib/seoIds";
 import LeadFormSimple from "@/components/LeadFormSimple";
 import TrackedPhoneLink from "@/components/TrackedPhoneLink";
+import GoogleReviews from "@/components/GoogleReviews";
 
 export async function generateMetadata() {
   const brand = site?.name || "Supreme IT Experts";
@@ -196,6 +197,11 @@ export default function ItAiCheckupLanding() {
         <p className="mt-3 text-xs text-slate-400">
           Source for “nine in ten”: our review of public DNS records for 135 local business domains, September 2026. No business is ever named.
         </p>
+      </section>
+
+      {/* GOOGLE REVIEWS */}
+      <section className="max-w-6xl mx-auto px-4 py-10">
+        <GoogleReviews />
       </section>
 
       {/* FAQ */}

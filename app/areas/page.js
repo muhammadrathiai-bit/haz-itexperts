@@ -313,7 +313,6 @@ export default async function AreasPage({ searchParams }) {
     { name: "Macungie, PA", slug: "macungie-pa" },
     { name: "Emmaus, PA", slug: "emmaus-pa" },
     { name: "Broomall, PA", slug: "broomall-pa" },
-    { name: "Newtown Square, PA", slug: "newtown-square-pa" },
     { name: "Havertown, PA", slug: "havertown-pa" },
     { name: "Springfield, PA", slug: "springfield-pa" },
     { name: "Media, PA", slug: "media-pa" },

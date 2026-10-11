@@ -84,7 +84,6 @@ export default function Header({ className = "" }) {
     "/tools/",
     "/services/ai-workflows",
     "/locations/broomall-pa",
-    "/locations/newtown-square-pa",
     "/locations/havertown-pa",
     "/locations/springfield-pa",
     "/locations/media-pa",

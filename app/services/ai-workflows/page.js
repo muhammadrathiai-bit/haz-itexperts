@@ -5,7 +5,6 @@ import { BUSINESS_ID, BASE_URL } from "@/lib/seoIds";
 
 const AREAS_SERVED = [
   "Broomall, PA",
-  "Newtown Square, PA",
   "Havertown, PA",
   "Springfield, PA",
   "Media, PA",
@@ -112,7 +111,6 @@ export default function Page() {
       desc: "By video call or phone anywhere, and onsite in Delaware County and the Main Line. Early-evening and Saturday times are available. You get a one-page report in 48 hours: your top 3 time and money leaks, your top 3 security gaps, and what we would fix first with a fixed price.",
       items: [
         { label: "Broomall, PA", href: "/locations/broomall-pa", desc: "Trades offices and professional suites." },
-        { label: "Newtown Square, PA", href: "/locations/newtown-square-pa", desc: "Offices and trades along West Chester Pike." },
         { label: "Havertown, PA", href: "/locations/havertown-pa", desc: "Our home base. Contractors, practices and local shops." },
         { label: "Springfield, PA", href: "/locations/springfield-pa", desc: "Retail, auto and professional offices." },
         { label: "Media, PA", href: "/locations/media-pa", desc: "Law, accounting and county-seat offices." },

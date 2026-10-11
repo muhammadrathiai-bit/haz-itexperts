@@ -179,28 +179,6 @@ export default function AboutPage() {
         "Senior-led standards across managed IT, security, and customer experience",
       ],
     },
-    {
-      name: "Muhammad Ahmad Rathi",
-      role: "Operations Manager",
-      subtitle: "MS Cloud Computing",
-      img: "/team/leader-ahmad.png",
-      bullets: [
-        "Runs day-to-day operations to keep support responsive and consistent",
-        "Change control + documentation discipline across client environments",
-        "Cloud best practices for reliability, scalability, and modernization",
-      ],
-    },
-    {
-      name: "Muhammad Hazrat Rathi",
-      role: "Head of Managed Services (MSP) & Automation",
-      subtitle: "MS AI & Machine Learning",
-      img: "/team/leader-hazrat.png",
-      bullets: [
-        "Owns MSP execution: monitoring, patching, endpoint standards, and automation",
-        "Proactive prevention: reduce repeat tickets and recurring downtime",
-        "Automation-driven workflows to improve response speed and consistency",
-      ],
-    },
   ];
 
   const jsonLd = {
