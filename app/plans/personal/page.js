@@ -48,6 +48,7 @@ const NEVER = [
 const ALWAYS = [
   "Written prices, before any work starts",
   "The same person every time: Muhammad, our founder, here in Havertown",
+  "A code word that you choose. When we call you, we say it first. If a caller does not know it, hang up",
   "A son, daughter or friend is welcome on any call, and can be the one we talk to if you prefer",
   "Plain words and patience. No question is too small",
 ];
